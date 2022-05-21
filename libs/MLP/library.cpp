@@ -26,6 +26,7 @@ DLLEXPORT  void train_mlp_model(
 }
 
 DLLEXPORT     float *predict_mlp_model(
+
         MyMLP *model, float *sample_inputs,
         int32_t num_features,
         bool is_classification) {
