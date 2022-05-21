@@ -1,0 +1,4 @@
+# ninja log v5
+0	73	1653158065246785435	CMakeFiles/MLP.dir/library.cpp.o	2ecece319f0b4f44
+73	114	1653158065288997329	libMLP.dylib	dc6a9d7621e26c26
+1	73	1653158065246664519	CMakeFiles/MLP.dir/MyMLP.cpp.o	40ef0bdc38b86706

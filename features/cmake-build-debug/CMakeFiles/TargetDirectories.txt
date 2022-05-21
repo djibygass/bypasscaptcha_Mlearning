@@ -1,0 +1,3 @@
+/Users/Gassama/pper/bypass_captcha/features/cmake-build-debug/CMakeFiles/features.dir
+/Users/Gassama/pper/bypass_captcha/features/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/Gassama/pper/bypass_captcha/features/cmake-build-debug/CMakeFiles/rebuild_cache.dir
