@@ -3,6 +3,7 @@
 //
 
 #include "MyMLP.h"
+#include "Eigen/Dense"
 
 MyMLP::MyMLP(int32_t *npl, int32_t npl_size) {
 
