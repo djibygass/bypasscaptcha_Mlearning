@@ -26,6 +26,11 @@ public:
                              bool is_classification);
 
     ~MyMLP();
+
+    private:
+        int32_t *npl;
+        int32_t npl_size;
+
 };
 
 

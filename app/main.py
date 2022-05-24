@@ -11,8 +11,9 @@ def test_dll(dll_path: str):
     npl = [2, 3, 1]
 
     npl_type = ctypes.c_int32 * len(npl)
+    
     native_npl_array = npl_type(*npl)
-
+   
     my_dll.create_mlp_model.argtypes = [npl_type, ctypes.c_int32]
     my_dll.create_mlp_model.restype = ctypes.c_void_p
 
