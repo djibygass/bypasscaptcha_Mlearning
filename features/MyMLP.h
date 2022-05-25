@@ -4,17 +4,17 @@
 
 #ifndef BYPASS_CAPTCHA_MYMLP_H
 #define BYPASS_CAPTCHA_MYMLP_H
-#include "Eigen/Dense"
+
 #include <cstdint>
 #include <cstdlib>
-#include <random>
+
 
 class MyMLP {
 
 public:
     MyMLP(int32_t *npl, int32_t npl_size);
 
-    float *wheight_init(int32_t *npl);
+    Void Weights();
 
     void train_mlp_model(float *all_samples_inputs,
                          int32_t num_sample,
@@ -37,10 +37,7 @@ private:
 
 };
 
-Eigen::MatrixXd array_weight(int row, int col){
-    Eigen::MatrixXd m1(row,col);
-    return m1;
-}
+
 
 
 
