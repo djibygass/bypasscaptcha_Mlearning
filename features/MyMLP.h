@@ -1,20 +1,25 @@
 //
-// Created by Djibril on 21/05/2022.
+// Created by Djibril on 26/05/2022.
 //
 
-#ifndef BYPASS_CAPTCHA_MYMLP_H
-#define BYPASS_CAPTCHA_MYMLP_H
+#ifndef FEATURES_MYMLP_H
+#define FEATURES_MYMLP_H
 
-#include <cstdint>
+
+
 #include <cstdlib>
+#include "Eigen/Dense"
+#include <vector>
 
 
 class MyMLP {
 
 public:
-    MyMLP(int32_t *npl, int32_t npl_size);
 
-    Void Weights();
+    MyMLP() = default;
+    MyMLP(int32_t  *npl, int32_t  npl_size);
+
+    std::vector<Eigen::MatrixXd> Weights_init(int32_t  *npl,int32_t  npl_size);
 
     void train_mlp_model(float *all_samples_inputs,
                          int32_t num_sample,
@@ -29,11 +34,12 @@ public:
                              int32_t num_features,
                              bool is_classification);
 
-    ~MyMLP();
+    //~MyMLP();
 
-private:
-    int32_t *npl;
-    int32_t npl_size;
+    int *npl;
+    int npl_size;
+    std::vector<Eigen::MatrixXd> Weights;
+
 
 };
 
@@ -48,4 +54,6 @@ private:
 
 
 
-#endif //BYPASS_CAPTCHA_MYMLP_H
+#endif //FEATURES_MYMLP_H
+
+

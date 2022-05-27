@@ -6,11 +6,19 @@
 #define BYPASS_CAPTCHA_MYMLP_H
 
 #include <cstdint>
+#include <cstdlib>
+#include "Eigen/Dense"
+#include <vector>
+
 
 class MyMLP {
 
 public:
-    MyMLP(int32_t *npl, int32_t npl_size);
+
+    MyMLP() = default;
+    MyMLP(int *npl, int npl_size);
+
+    std::vector<Eigen::MatrixXd> Weights_init(int *npl,int npl_size);
 
     void train_mlp_model(float *all_samples_inputs,
                          int32_t num_sample,
@@ -27,11 +35,13 @@ public:
 
     ~MyMLP();
 
-    private:
-        int32_t *npl;
-        int32_t npl_size;
+
+    std::vector<Eigen::MatrixXd> Weights;
+
 
 };
+
+
 
 
 
